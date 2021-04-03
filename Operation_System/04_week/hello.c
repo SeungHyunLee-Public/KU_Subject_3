@@ -1,0 +1,15 @@
+/*
+* A file executed by child process
+*
+*/
+#include <unistd.h>
+#include <stdio.h>
+
+int		main()
+{
+	do {
+
+		printf("I'm hello. I'm alive!\n");
+		sleep(5);
+		} while (1);
+}
