@@ -15,7 +15,7 @@ int		main(int argc, char *argv[])
 	(void) argc;
 	DTYPE *arr;
 	double	tstart;
-	int		N;
+	int		i, N;
 	N = atoi(argv[1]);
 	srand(time(NULL));
 	arr = mk_rand_data (N);
@@ -24,11 +24,11 @@ int		main(int argc, char *argv[])
 //	qsort(arr, N, sizeof(DTYPE), cmp);
 	quicksort(arr, N);
 	printf("quicksort:%f\n", toc(tstart));
-/*#if 1
+#if 1
 	for (i = 0; i < N; i++)
-		printf("%f \n", arr[i]);	*/
-/*#endif
-	return 0;					*/
+		printf("%f \n", arr[i]);	
+#endif
+	return 0;					
 }
 
 int		cmp(const void *a, const void *b)
